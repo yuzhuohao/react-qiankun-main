@@ -1,0 +1,25 @@
+{
+    "repairStorageRecordDetail": {
+        "currentPageNum": 0,
+        "errorCode": "",
+        "errorMsg": "",
+        "pageCount": 0,
+        "pageSize": 0,
+        "success": true,
+        "totalNum": 10,
+        "voList": [
+            {
+                "col1": 1231243,
+                "col2": 2,
+                "col3": 16,
+                "col4": 98
+            },
+            {
+                "col1": 1231243,
+                "col2": 3,
+                "col3": 16,
+                "col4": 98
+            }
+        ]
+    }
+}
