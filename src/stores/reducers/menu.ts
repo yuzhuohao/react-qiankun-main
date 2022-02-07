@@ -1,4 +1,4 @@
-import { MenuAction } from '../actions/index';
+import { MenuAction } from '../actions/menus';
 import { MenuState, TabProps } from '@/types/common';
 
 const defaultState: MenuState = {
@@ -11,16 +11,16 @@ const defaultState: MenuState = {
 		},
 	],
 	menus: [
-		{
-			title: 'react子应用user',
-			key: 'react_user',
-			path: '/react-ts-qiankun-app/user',
-		},
-		{
-			title: 'react子应用article',
-			key: 'react_article',
-			path: '/react-ts-qiankun-app/article',
-		},
+		// {
+		// 	title: 'react子应用user',
+		// 	key: 'react_user',
+		// 	path: '/react-ts-qiankun-app/user',
+		// },
+		// {
+		// 	title: 'react子应用article',
+		// 	key: 'react_article',
+		// 	path: '/react-ts-qiankun-app/article',
+		// },
 	],
 	activeKey: 'dashboard',
 	activePath: '/dashboard',
@@ -66,7 +66,7 @@ function closeTab(
 		console.log(activeKey, 'activekey');
 		console.log(newTabs, 'newTabs');
 		if (newTabs[newTabs.length - 1].key == activeKey) {
-			activeKey = newTabs[newTabs.length-2].key;
+			activeKey = newTabs[newTabs.length - 2].key;
 		} else {
 			let indexActive = 0;
 			newTabs.forEach((item, index) => {

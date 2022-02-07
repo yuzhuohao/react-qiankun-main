@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { Tabs } from 'antd';
 import { TabProps, PageProps } from '@/types/common';
-import { changeActive, closeTab } from '@/stores/actions';
+import { changeActive, closeTab } from '@/stores/actions/menus';
 import store from '@/stores';
 const { TabPane } = Tabs;
 
@@ -11,7 +11,7 @@ const TopTabs: React.FC<PageProps> = (props) => {
 	const { menuState } = useSelector((store: any) => store);
 	const dispatch = useDispatch();
 	const { tabs, activeKey } = menuState;
-	// console.log(activeKey,'active')
+
 
 	function onChange(activeKey: string) {
 		dispatch(changeActive(activeKey));

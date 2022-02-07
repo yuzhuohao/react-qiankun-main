@@ -1,4 +1,4 @@
-import Index from '@pages/Index';
+import Index from '@/pages/Index';
 import Dashboard from '@/pages/dashboard/Index';
 import { RouteConfig } from '@/types/common';
 

@@ -1,4 +1,4 @@
-import { changeLanguageAction } from '../actions/index';
+import { changeLanguageAction } from '../actions/language';
 import { IntlState } from '@/types/common';
 import { loadLocale } from '@/locale/index';
 

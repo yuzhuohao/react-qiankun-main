@@ -4,7 +4,7 @@ import { PageProps } from '@/types/common';
 import { Menu } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { useDispatch, useSelector } from 'react-redux';
-import { addTab } from '@/stores/actions';
+import { addTab } from '@/stores/actions/menus';
 import { MenuProps } from '@/types/common';
 
 import './index.less';

@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
 	entry: {
 		//项目入口
-		app: "./src/index.tsx",
+		app: "./src/Index.tsx",
 	},
 	output: {
 		path: path.resolve(__dirname, '../dist'),

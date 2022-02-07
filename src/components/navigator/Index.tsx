@@ -1,13 +1,20 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Select, Button } from 'antd';
-import { changeDirection, changeLanguage } from '@/stores/actions';
+import { changeDirection, changeLanguage } from '@/stores/actions/language';
+import { getWeather } from '@/stores/actions/menus';
+import { useEffect } from 'react';
+
 import actions from '@/action';
 const { Option } = Select;
 
 const TopNavigator: React.FC = () => {
 	const { intlState } = useSelector((store: any) => store);
 	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(getWeather());
+	}, []);
 
 	const { language, languageList, direction } = intlState;
 

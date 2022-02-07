@@ -1,24 +1,15 @@
 {
-    "repairStorageRecordDetail": {
-        "currentPageNum": 0,
-        "errorCode": "",
-        "errorMsg": "",
-        "pageCount": 0,
-        "pageSize": 0,
-        "success": true,
-        "totalNum": 10,
-        "voList": [
+    "menus": {
+        "data": [
             {
-                "col1": 1231243,
-                "col2": 2,
-                "col3": 16,
-                "col4": 98
+                "title": "react子应用user",
+                "key": "react_user",
+                "path": "/react-qiankun-micro/user"
             },
             {
-                "col1": 1231243,
-                "col2": 3,
-                "col3": 16,
-                "col4": 98
+                "title": "react子应用article",
+                "key": "react_article",
+                "path": "/react-qiankun-micro/article"
             }
         ]
     }

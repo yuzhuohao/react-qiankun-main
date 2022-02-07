@@ -6,8 +6,6 @@ const initialState = {
 
 const actions: MicroAppStateActions = initGlobalState(initialState);
 
-actions.onGlobalStateChange((state, prev) => {
-	// console.log(state, prev);
-});
+actions.onGlobalStateChange((state, prev) => {});
 
 export default actions;

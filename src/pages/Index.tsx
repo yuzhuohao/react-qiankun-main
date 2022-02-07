@@ -1,17 +1,13 @@
 import React from 'react';
 import { PageProps } from '@/types/common';
-import { Layout, Menu } from 'antd';
-import { UserOutlined } from '@ant-design/icons';
-import { useDispatch, useSelector } from 'react-redux';
+import { Layout } from 'antd';
+import { useSelector } from 'react-redux';
 const { Resizable } = require('react-resizable');
-
-import { addTab, changeActive } from '@/stores/actions';
-import { MenuProps } from '@/types/common';
 import RouterView from '@/router/Index';
 import TopTabs from '@components/tabs/Index';
 import TopNavigator from '@components/navigator/Index';
 import Menus from '@components/menus/Index';
-import './Index.less';
+import './index.less';
 
 const { Header, Sider, Content } = Layout;
 
@@ -22,26 +18,33 @@ const Index: React.FC<PageProps> = (props) => {
 	const { intlState } = useSelector((store: any) => store);
 	const { direction } = intlState;
 
-	function onResize(event: any, { element, size }: any) {
+	function onResize(
+		event: MouseEvent,
+		{ size }: { size: { width: number } }
+	) {
 		setTempWidth(size.width);
 	}
-	function onResizeStart(event: any, { element, size }: any) {
-		// console.log('开始', size);
-		// setTempWidth(width);
-	}
-	function onResizeStop(event: any, { element, size }: any) {
+	function onResizeStart(
+		event: MouseEvent,
+		{ size }: { size: { width: number } }
+	) {}
+	function onResizeStop(
+		event: MouseEvent,
+		{ size }: { size: { width: number } }
+	) {
 		setWidth(size.width);
-		// setTempWidth(0);
 	}
+
 	return (
 		<Layout className="index-page" style={{ position: 'relative' }}>
 			<Resizable
 				width={tempWidth}
+				height={0}
 				onResizeStop={onResizeStop}
 				onResizeStart={onResizeStart}
 				onResize={onResize}
 				axis="x"
-				resizeHandles={[direction == 'ltr' ? 'we' : 'nw']}
+				resizeHandles={[direction == 'ltr' ? 'ne' : 'nw']}
 			>
 				<Sider className="left-sider" width={width} trigger={null}>
 					<div className="app_name"></div>
@@ -49,10 +52,17 @@ const Index: React.FC<PageProps> = (props) => {
 				</Sider>
 			</Resizable>
 			{tempWidth != width ? (
-				<div
-					className="temp-border"
-					style={{ left: tempWidth - 5 }}
-				></div>
+				direction == 'ltr' ? (
+					<div
+						className="temp-border"
+						style={{ left: tempWidth - 5 }}
+					/>
+				) : (
+					<div
+						className="temp-border"
+						style={{ right: tempWidth - 5 }}
+					/>
+				)
 			) : (
 				''
 			)}

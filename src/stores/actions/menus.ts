@@ -1,11 +1,6 @@
+import axios from '@/utils/axios';
 import { MenuProps } from '@/types/common';
 import { TabProps } from '@/types/common';
-
-export interface changeLanguageAction {
-	type: 'CHANGE_LANGUAGE' | 'CHANGE_DIRECTION';
-	language: 'en-US' | 'zh-CN';
-	direction: 'rtl' | 'ltr';
-}
 
 export interface MenuAction {
 	type: 'LOAD_MENUS' | 'CHANGE_ACTIVE' | 'ADD_TAB' | 'CLOSE_TAB';
@@ -15,23 +10,23 @@ export interface MenuAction {
 	deleteKey?: string;
 }
 
-export const changeLanguage = (lang: string) => {
-	return {
-		type: 'CHANGE_LANGUAGE',
-		language: lang,
-	};
-};
-
-export const changeDirection = () => {
-	return {
-		type: 'CHANGE_DIRECTION',
+export const getWeather = () => {
+	return (dispatch: Function) => {
+		axios
+			.get('/mock/menus')
+			.then((res) => {
+				dispatch({ type: 'LOAD_MENUS', menus: res.data.data });
+			})
+			.catch((err: any) => {
+				console.log('错误', err);
+			});
 	};
 };
 
 export const loadMenu = (menus: Array<MenuProps>) => {
 	return {
 		type: 'LOAD_MENUS',
-		payload: menus,
+		menus: menus,
 	};
 };
 

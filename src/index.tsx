@@ -16,10 +16,10 @@ ReactDOM.render(
 
 registerMicroApps([
 	{
-		name: 'react-ts-qiankun-app',
+		name: 'react-qiankun-micro',
 		entry: 'http://localhost:3000',
 		container: '#app',
-		activeRule: '/react-ts-qiankun-app',
+		activeRule: '/react-qiankun-micro',
 	},
 ]);
 start();

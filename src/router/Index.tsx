@@ -1,14 +1,13 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { RouteConfig } from '@/types/common'
-import { Components } from "antd/lib/date-picker/generatePicker";
 
 
-type Props = {
+type RouterProps = {
     routes: Array<RouteConfig>;
 }
 
-const RouterView: React.FC<Props> = ({ routes }) => {
+const RouterView: React.FC<RouterProps> = ({ routes }) => {
     return (
         <Switch>
             {routes.map((item, index) => {
