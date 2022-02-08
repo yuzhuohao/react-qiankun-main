@@ -1,5 +1,4 @@
 import axios from 'axios';
-import Router from '../router';
 import { message } from 'antd';
 
 axios.defaults.timeout = 36000000; //设置超时时间

@@ -3,7 +3,7 @@ import { PageProps } from '@/types/common';
 import { Layout } from 'antd';
 import { useSelector } from 'react-redux';
 const { Resizable } = require('react-resizable');
-import RouterView from '@/router/Index';
+import RouterView from '@/router/Router';
 import TopTabs from '@components/tabs/Index';
 import TopNavigator from '@components/navigator/Index';
 import Menus from '@components/menus/Index';

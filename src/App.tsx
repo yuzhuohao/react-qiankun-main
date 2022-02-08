@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import RouterView from '@/router/Index';
+import RouterView from '@/router/Router';
 import { routes } from '@router/config';
 import { ConfigProvider } from 'antd';
 import { useSelector } from 'react-redux';

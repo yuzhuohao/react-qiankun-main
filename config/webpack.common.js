@@ -30,7 +30,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: "react-ts-qiankun-app",
+			title: "react-qiankun-main",
 			template: path.resolve(__dirname, "../index.html"),
 			filename: "index.html",
 		}),
