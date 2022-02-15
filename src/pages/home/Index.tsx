@@ -47,7 +47,7 @@ const Index: React.FC<PageProps> = (props) => {
 				resizeHandles={[direction == 'ltr' ? 'ne' : 'nw']}
 			>
 				<Sider className="left-sider" width={width} trigger={null}>
-					<div className="app_name"></div>
+					<div className="app_name">react主应用</div>
 					<Menus />
 				</Sider>
 			</Resizable>
